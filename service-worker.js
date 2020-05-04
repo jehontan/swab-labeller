@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/swab-labeller/precache-manifest.498147d6073f2b4caa1904f641064e7d.js"
+  "/swab-labeller/precache-manifest.74f913113919b0b5f292a6b7d895c19b.js"
 );
 
 self.addEventListener('message', (event) => {
