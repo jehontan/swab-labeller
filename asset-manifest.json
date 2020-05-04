@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/swab-labeller/static/css/main.d1b05096.chunk.css",
-    "main.js": "/swab-labeller/static/js/main.d27d2ab9.chunk.js",
-    "main.js.map": "/swab-labeller/static/js/main.d27d2ab9.chunk.js.map",
+    "main.js": "/swab-labeller/static/js/main.7e6d4d0e.chunk.js",
+    "main.js.map": "/swab-labeller/static/js/main.7e6d4d0e.chunk.js.map",
     "runtime-main.js": "/swab-labeller/static/js/runtime-main.0b62cb7a.js",
     "runtime-main.js.map": "/swab-labeller/static/js/runtime-main.0b62cb7a.js.map",
-    "static/js/2.3e48d39e.chunk.js": "/swab-labeller/static/js/2.3e48d39e.chunk.js",
-    "static/js/2.3e48d39e.chunk.js.map": "/swab-labeller/static/js/2.3e48d39e.chunk.js.map",
+    "static/js/2.6974ecd9.chunk.js": "/swab-labeller/static/js/2.6974ecd9.chunk.js",
+    "static/js/2.6974ecd9.chunk.js.map": "/swab-labeller/static/js/2.6974ecd9.chunk.js.map",
     "index.html": "/swab-labeller/index.html",
-    "precache-manifest.54ed52ba95fcb7c180dd817740136e14.js": "/swab-labeller/precache-manifest.54ed52ba95fcb7c180dd817740136e14.js",
+    "precache-manifest.498147d6073f2b4caa1904f641064e7d.js": "/swab-labeller/precache-manifest.498147d6073f2b4caa1904f641064e7d.js",
     "service-worker.js": "/swab-labeller/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/swab-labeller/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.3e48d39e.chunk.js.LICENSE.txt": "/swab-labeller/static/js/2.3e48d39e.chunk.js.LICENSE.txt"
+    "static/js/2.6974ecd9.chunk.js.LICENSE.txt": "/swab-labeller/static/js/2.6974ecd9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0b62cb7a.js",
-    "static/js/2.3e48d39e.chunk.js",
+    "static/js/2.6974ecd9.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.d27d2ab9.chunk.js"
+    "static/js/main.7e6d4d0e.chunk.js"
   ]
 }

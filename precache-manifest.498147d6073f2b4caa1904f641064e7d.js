@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8575451342f5fc8005fb6ba5fbbda36e",
+    "revision": "93b4e0aa86224c86dcb393245c37ff5c",
     "url": "/swab-labeller/index.html"
   },
   {
-    "revision": "501e9e0799a101ad6448",
+    "revision": "853088ed1af597111c87",
     "url": "/swab-labeller/static/css/main.d1b05096.chunk.css"
   },
   {
-    "revision": "530dc74b66b598fdca7f",
-    "url": "/swab-labeller/static/js/2.3e48d39e.chunk.js"
+    "revision": "b4b1d8ea6717f61b42d3",
+    "url": "/swab-labeller/static/js/2.6974ecd9.chunk.js"
   },
   {
     "revision": "d466ab9648f013dea081956fc7c904f3",
-    "url": "/swab-labeller/static/js/2.3e48d39e.chunk.js.LICENSE.txt"
+    "url": "/swab-labeller/static/js/2.6974ecd9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "501e9e0799a101ad6448",
-    "url": "/swab-labeller/static/js/main.d27d2ab9.chunk.js"
+    "revision": "853088ed1af597111c87",
+    "url": "/swab-labeller/static/js/main.7e6d4d0e.chunk.js"
   },
   {
     "revision": "2550e46730e5f41d55cf",
