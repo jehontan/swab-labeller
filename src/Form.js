@@ -44,7 +44,7 @@ class Form extends React.Component {
   render() {
     return (
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} sm={6}>
               <TextField 
                 id="input-name" 
                 label="Name" 
@@ -53,7 +53,7 @@ class Form extends React.Component {
                 onChange={this.handleNameChange}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} sm={6}>
               <TextField 
                 id="input-nric" 
                 label="NRIC/FIN"
@@ -62,7 +62,7 @@ class Form extends React.Component {
                 onChange={this.handleNricChange}
               />
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} sm={3}>
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <KeyboardDatePicker
                   fullWidth
@@ -76,7 +76,7 @@ class Form extends React.Component {
                 />
               </MuiPickersUtilsProvider>
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} sm={3}>
               <TextField 
                 select
                 id="input-gender" 
@@ -90,9 +90,9 @@ class Form extends React.Component {
                 <MenuItem key="F" value="F">Female</MenuItem>
               </TextField>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} sm={6}>
               <TextField 
-                id="input-nric" 
+                id="input-nationality" 
                 label="Nationality"
                 variant="standard"
                 fullWidth
