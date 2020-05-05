@@ -1,6 +1,6 @@
 import React from 'react';
 import DateFnsAdapter from "@date-io/date-fns";
-const QRCode = require('qrcode');
+const QRCode = require('qrcode-generator');
 
 const dateFns = new DateFnsAdapter();
 
