@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ba83d327e913c17edb9b0c361b97dbe",
+    "revision": "7eaf51f23c3dbb6b6e34b4ccbc0c0638",
     "url": "/swab-labeller/index.html"
   },
   {
-    "revision": "4a83cace144bc2eda62c",
+    "revision": "b2e39613411ed6890f44",
     "url": "/swab-labeller/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/swab-labeller/static/js/2.d57db3d8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4a83cace144bc2eda62c",
-    "url": "/swab-labeller/static/js/main.30fadc09.chunk.js"
+    "revision": "b2e39613411ed6890f44",
+    "url": "/swab-labeller/static/js/main.73f27940.chunk.js"
   },
   {
     "revision": "2550e46730e5f41d55cf",
