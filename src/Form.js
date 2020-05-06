@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -7,16 +8,28 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import IconButton from '@material-ui/core/IconButton';
+
+import BarcodeScanDialog from './BarcodeScanDialog';
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      scanDialogOpen: false,
+    };
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleNricChange = this.handleNricChange.bind(this);
     this.handleGenderChange = this.handleGenderChange.bind(this);
     this.handleDOBChange = this.handleDOBChange.bind(this);
     this.handleNationalityChange = this.handleNationalityChange.bind(this);
+    this.handleScanDialogOpen = this.handleScanDialogOpen.bind(this);
+    this.handleScanDialogClose = this.handleScanDialogClose.bind(this);
+    this.handleScanResult = this.handleScanResult.bind(this);
   }
 
   // Change Handlers
@@ -41,13 +54,28 @@ class Form extends React.Component {
     this.props.onChange({nationality: event.target.value});
   }
 
+  handleScanDialogOpen(){
+    this.setState({scanDialogOpen: true});
+  }
+
+  handleScanDialogClose() {
+    this.setState({scanDialogOpen: false});
+  }
+
+  handleScanResult(result) {
+    this.setState({scanDialogOpen: false});
+    this.props.onChange({nric: result});
+  }
+
   render() {
     return (
+        <React.Fragment>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <TextField 
                 id="input-name" 
                 label="Name" 
+                value={this.props.name}
                 variant="standard" 
                 fullWidth 
                 onChange={this.handleNameChange}
@@ -59,7 +87,11 @@ class Form extends React.Component {
                 label="NRIC/FIN"
                 variant="standard"
                 fullWidth
+                value={this.props.nric}
                 onChange={this.handleNricChange}
+                InputProps={{
+                  endAdornment:(<InputAdornment position="end"><IconButton onClick={this.handleScanDialogOpen}><PhotoCameraIcon /></IconButton></InputAdornment>),
+                }}
               />
             </Grid>
             <Grid item xs={12} sm={3}>
@@ -95,11 +127,14 @@ class Form extends React.Component {
                 id="input-nationality" 
                 label="Nationality"
                 variant="standard"
+                value={this.props.nationality}
                 fullWidth
                 onChange={this.handleNationalityChange}
               />
             </Grid>
           </Grid>
+          <BarcodeScanDialog open={this.state.scanDialogOpen} onClose={this.handleScanDialogClose} onResult={this.handleScanResult}/>
+        </React.Fragment>
     );
   }
 }

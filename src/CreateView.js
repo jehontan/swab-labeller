@@ -38,8 +38,9 @@ class CreateView extends React.Component {
     this.handleFormChange = this.handleFormChange.bind(this);
     this.handleGenerate = this.handleGenerate.bind(this);
     this.handlePrint = this.handlePrint.bind(this);
+    this.handleNewEntry = this.handleNewEntry.bind(this);
     this.canvasRef = React.createRef();
-
+  
     this.state = {
       generate: false,
       name: '',
@@ -48,6 +49,19 @@ class CreateView extends React.Component {
       gender: 'M',
       nationality: ''
     };
+  }
+
+  handleNewEntry() {
+    this.setState({
+      generate: false,
+      name: '',
+      nric: '',
+      dob: Date.now(),
+      gender: 'M',
+      nationality: ''
+    });
+
+    this.props.onNewEntry();
   }
 
   handleFormChange(change) {
@@ -64,6 +78,7 @@ class CreateView extends React.Component {
   }
 
   handlePrint() {
+    console.log("Print called");
     const canvas = this.canvasRef.current;
     const img = canvas.toDataURL("image/png");
     console.log(img);
@@ -71,12 +86,15 @@ class CreateView extends React.Component {
     a.document.write('<img src="'+ img +'"/>');
     a.onload = ()=>a.print();
     a.document.close();
-    this.props.onPrint()
+    this.props.onPrint();
   }
 
   render()
   {
     const {classes} = this.props;
+
+    if (this.props.print) this.handlePrint();
+    if (this.props.newEntry) this.handleNewEntry();
     
     return (
       <React.Fragment>

@@ -15,6 +15,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import PrintIcon from '@material-ui/icons/Print';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 import CreateView from './CreateView';
 import { formatDistanceStrictWithOptions } from 'date-fns/fp';
@@ -41,9 +42,11 @@ class App extends React.Component {
     super(props);
     this.handlePrint = this.handlePrint.bind(this);
     this.handlePrintDone = this.handlePrintDone.bind(this);
+    this.handleNewEntry = this.handleNewEntry.bind(this);
 
     this.state = {
       print: false,
+      newEntry: false,
     };
   }
 
@@ -53,6 +56,10 @@ class App extends React.Component {
 
   handlePrintDone() {
     this.setState({print: false});
+  }
+
+  handleNewEntry() {
+    this.setState({newEntry: true})
   }
 
   render()
@@ -68,21 +75,21 @@ class App extends React.Component {
           <Typography variant="h6" className={classes.title}>
             Swab Labeller
           </Typography>
-          <Switch>
-          <Route exact path="/">
-            <Button color="inherit" startIcon={<PrintIcon />} onClick={this.handlePrint}>Print</Button>
-          </Route>
-        </Switch>
-          
+            <Switch>
+            <Route path="/">
+              <Button color="inherit" startIcon={<AddCircleOutlineIcon />} onClick={this.handleNewEntry}>New</Button>
+              <Button color="inherit" startIcon={<PrintIcon />} onClick={this.handlePrint}>Print</Button>
+            </Route>
+          </Switch>
         </Toolbar>
       </AppBar>
       <Container className={classes.container} maxWidth="md">
         <Switch>
           <Route path="/scan">
-            
+            {<h1>Test</h1>}
           </Route>
-          <Route exact path="/">
-            <CreateView />
+          <Route path="/">
+            <CreateView onPrint={this.handlePrintDone} onNewEntry={()=>this.setState({newEntry: false})} {...this.state}/>
           </Route>
         </Switch>
       </Container>
